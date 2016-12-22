@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SimpleSmartHouse1._0.AirCondition">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="2.824" />
+        <Point X="4.75" Y="3.393" />
+        <Point X="1.25" Y="3.393" />
+        <Point X="1.25" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAwAAABAKCEAAABAIAABAAAgAAACAAAgEAAAIg=</HashCode>
+      <FileName>AirCondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Dehumidifier">
+    <Position X="5" Y="4" Width="1.5" />
+    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="2.824" />
+        <Point X="4.75" Y="3.383" />
+        <Point X="5.75" Y="3.383" />
+        <Point X="5.75" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAEAAgAAABAICEAAABAAAABAAAAAAACAAAgEgBIIg=</HashCode>
+      <FileName>Dehumidifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Device">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAhEAAAAA=</HashCode>
+      <FileName>Device.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Heater">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="2.824" />
+        <Point X="4.75" Y="3.37" />
+        <Point X="8" Y="3.37" />
+        <Point X="8" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAwAAABAKCEAAABAIAABAAAgAAACAAAgEAAAIg=</HashCode>
+      <FileName>Heater.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Humidifier">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
+      <Path>
+        <Point X="4.75" Y="2.824" />
+        <Point X="4.75" Y="3.37" />
+        <Point X="3.5" Y="3.37" />
+        <Point X="3.5" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAEAAgAAABAICEAAABAAAABAAAAAAACAAAgEgBIIg=</HashCode>
+      <FileName>Humidifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Program">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SimpleSmartHouse1._0.IChangeSettingAble">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAABAAAAAAABAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>IChangeSettingAble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleSmartHouse1._0.IHumidityAble">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBIAA=</HashCode>
+      <FileName>IHumidityAble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleSmartHouse1._0.ITemperatureAble">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAACAAAAAAAIAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITemperatureAble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SimpleSmartHouse1._0.Mode">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAACAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
