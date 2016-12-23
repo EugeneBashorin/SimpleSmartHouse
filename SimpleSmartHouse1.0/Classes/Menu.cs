@@ -238,19 +238,19 @@ namespace SimpleSmartHouse1._0
         private static void Help()
         {
             Console.WriteLine("Доступные команды:");
-            Console.WriteLine("\tadd nameDevice - Добавить прибор в список");
-            Console.WriteLine("\tdel nameDevice - Удалить прибор из списка");
-            Console.WriteLine("\tcn nameDevice - Переименовать Марку дивайса");
-            Console.WriteLine("\ton nameDevice  - Включить прибор");
-            Console.WriteLine("\toff nameDevice - Выключить прибор");
-            Console.WriteLine("\ttur nameDevice - переводит прибор в режим Турбо");
-            Console.WriteLine("\teco nameDevice - переводит прибор в режим Эко");
-            Console.WriteLine("\tlow nameDevice - переводит прибор в режим Слабый");
-            Console.WriteLine("\taut nameDevice - переводит прибор в режим Авто");
-            Console.WriteLine("\tinc nameDevice - повысить температуру прибора");
-            Console.WriteLine("\tdec nameDevice - понизить температуру прибора");
-            Console.WriteLine("\thse nameDevice - ручная настройка температуры прибора");
-            Console.WriteLine("\tchs nameDevice - изменить шаг температуры прибора");
+            Console.WriteLine("\tadd nameDevice - Добавить девайс в список");
+            Console.WriteLine("\tdel nameDevice - Удалить девайс из списка");
+            Console.WriteLine("\tcn nameDevice -  Переименовать Марку девайса");
+            Console.WriteLine("\ton nameDevice  - Включить девайс");
+            Console.WriteLine("\toff nameDevice - Выключить девайс");
+            Console.WriteLine("\ttur nameDevice - переводит девайс в режим Турбо");
+            Console.WriteLine("\teco nameDevice - переводит девайс в режим Эко");
+            Console.WriteLine("\tlow nameDevice - переводит девайс в режим Слабый");
+            Console.WriteLine("\taut nameDevice - переводит девайс в режим Авто");
+            Console.WriteLine("\tinc nameDevice - повысить температуру девайса");
+            Console.WriteLine("\tdec nameDevice - понизить температуру девайса");
+            Console.WriteLine("\thse nameDevice - ручная настройка уровня температуры/ влажности девайса");
+            Console.WriteLine("\tchs nameDevice - изменить шаг температуры/ влажности девайса");
             Console.WriteLine("\texit  - Выход из меню");
             Console.WriteLine("Нажмите любую клавишу для продолжения");
             Console.ReadLine();
