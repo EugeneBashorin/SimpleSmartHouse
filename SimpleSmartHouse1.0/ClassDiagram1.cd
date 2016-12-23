@@ -78,6 +78,13 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SimpleSmartHouse1._0.Menu">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="SimpleSmartHouse1._0.IChangeSettingAble">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>

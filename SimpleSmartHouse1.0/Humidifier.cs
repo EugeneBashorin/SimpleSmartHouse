@@ -40,11 +40,20 @@ namespace SimpleSmartHouse1._0
         public int ChangeStep()
         {
             Console.WriteLine("Введите значение шага изменения температуры для увлажнителя воздуха.\nШаг температуры может находится в пределах (1..10).Шаг по умолчанию равен 1");
-            string v = Console.ReadLine();
-            int a = Convert.ToInt32(v);
+            try
+            {
+            int a = Convert.ToInt32(Console.ReadLine());
             if (a >= 1 && a <= 10)
             { Step = a; }
             return Step;
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Message - " + e.Message);
+                Console.WriteLine("Введите цифру");
+                Console.ReadLine();
+                return Step;
+            }
         }
         public void Increase()
         {
@@ -63,12 +72,20 @@ namespace SimpleSmartHouse1._0
         public int HandSet()
         {
             Console.WriteLine("Введите необходимый уровень температуры.\nВажно!!! Устанавливаемая температура может находится в пределах (40 до 95)");
-            string str = Console.ReadLine();
-            int a = Int32.Parse(str);
-            if (a > Min && a < Max)
-            { Current = a; }
-            Console.WriteLine("Вы ввели не правильную размерность температуры");
-            return Current;
+            try
+            {
+                int a = Convert.ToInt32(Console.ReadLine());
+                if (a > Min && a < Max)
+                { Current = a; }
+                return Current;
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Message - " + e.Message);
+                Console.WriteLine("Введите число в указанных выше пределах");
+                Console.ReadLine();
+                return Current;
+            }
         }
         public override string ToString()
         {

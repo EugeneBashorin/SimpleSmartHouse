@@ -11,5 +11,5 @@ namespace SimpleSmartHouse1._0
         Eco,
         Low,
         Auto
-    }
+     }
 }
