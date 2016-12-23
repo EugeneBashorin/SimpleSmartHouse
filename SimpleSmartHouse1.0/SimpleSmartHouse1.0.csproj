@@ -49,8 +49,6 @@
     <Compile Include="Heater.cs" />
     <Compile Include="Humidifier.cs" />
     <Compile Include="IChangeSettingAble.cs" />
-    <Compile Include="IHumidityAble.cs" />
-    <Compile Include="ITemperatureAble.cs" />
     <Compile Include="Mode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

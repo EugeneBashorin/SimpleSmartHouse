@@ -10,10 +10,10 @@ namespace SimpleSmartHouse1._0
      static void Main(string[] args)
      {
       IDictionary<string, Device> deviceDict = new Dictionary<string, Device>();
-      deviceDict.Add("Heater", new Heater("Ufo", false, Mode.Eco, 18) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 18 });
-      deviceDict.Add("Humidifier", new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 50 });
-      deviceDict.Add("Dehumidifier", new Dehumidifier("BALLU", false, Mode.Low, 40) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 40 });
-      deviceDict.Add("AirCondition", new AirCondition("Yamaha", false, Mode.Low, 22) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 22 });
+      deviceDict.Add("Heater", new Heater("Ufo", false, Mode.Eco, 18) { Min = 14, Max = 30, Step = 1, Current = 18 });
+      deviceDict.Add("Humidifier", new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { Min = 45, Max = 95, Step = 5, Current = 50 });
+      deviceDict.Add("Dehumidifier", new Dehumidifier("BALLU", false, Mode.Low, 40) { Min = 45, Max = 95, Step = 5, Current = 40 });
+      deviceDict.Add("AirCondition", new AirCondition("Yamaha", false, Mode.Low, 22) { Min = 14, Max = 30, Step = 1, Current = 22 });
                
       while (true)
       {
@@ -38,22 +38,22 @@ namespace SimpleSmartHouse1._0
               {
                     if (commands[1] == "Heater")
                     {
-                        deviceDict.Add(commands[1], new Heater("Ufo", false, Mode.Eco, 18) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 18 });
+                        deviceDict.Add(commands[1], new Heater("Ufo", false, Mode.Eco, 18) { Min = 14, Max = 30, Step = 1, Current = 18 });
                         continue;
                     }
                     else if (commands[1] == "Humidifier")
                     {
-                        deviceDict.Add(commands[1], new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 50 });
+                        deviceDict.Add(commands[1], new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { Min = 45, Max = 95, Step = 5, Current = 50 });
                         continue;
                     }
                     else if (commands[1] == "Dehumidifier")
                     {
-                        deviceDict.Add(commands[1], new Dehumidifier("BALLU", false, Mode.Low, 40) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 40 });
+                        deviceDict.Add(commands[1], new Dehumidifier("BALLU", false, Mode.Low, 40) { Min = 45, Max = 95, Step = 5, Current = 40 });
                         continue;
                     }
                     else if (commands[1] == "AirCondition")
                     {
-                        deviceDict.Add(commands[1], new AirCondition("ЯМаха", false, Mode.Low, 22) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 22 });
+                        deviceDict.Add(commands[1], new AirCondition("ЯМаха", false, Mode.Low, 22) { Min = 14, Max = 30, Step = 1, Current = 22 });
                         continue;
                     }
                     else { }

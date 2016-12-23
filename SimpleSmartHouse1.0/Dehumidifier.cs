@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace SimpleSmartHouse1._0
 {
-    class Dehumidifier : Device, IHumidityAble, IChangeSettingAble
+    class Dehumidifier : Device, IChangeSettingAble
     {
         private Mode mode;
-        public int MinHum { get; set; }
-        public int MaxHum { get; set; }
-        public int CurHum { get; set; }
-        public int StepHum { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
+        public int Current { get; set; }
+        public int Step { get; set; }
+  
 
-        public Dehumidifier(string name, bool state, Mode mode, int current) : base(name, state)
+        public Dehumidifier(string name, bool state, Mode mode, int currentH) : base(name, state)
         {
             Name = name;
             State = false;
             this.mode = mode;
-            StepHum = current;
+            Step = currentH;
+          
         }        
         public void SetTurboMode()
         {
@@ -39,37 +41,36 @@ namespace SimpleSmartHouse1._0
         }
         public int ChangeStep()
         {
-            Console.WriteLine("Введите значение шага изменения влажности в пределах (1...5)");
+            Console.WriteLine("Введите значение шага изменения температуры для осушителя воздуха.\nШаг температуры может находится в пределах (1..10).Шаг по умолчанию равен 1");
             string v = Console.ReadLine();
             int a = Convert.ToInt32(v);
-            if (a >= 1 && a <= 5)
-            { StepHum = a; }
-            return StepHum;
+            if (a >= 1 && a <= 10)
+            { Step = a; }
+            return Step;
         }
-        public void Increase()
+         public void Increase()
         {
-            if (CurHum < MaxHum || (CurHum + StepHum) < MaxHum)
-            { CurHum += StepHum; }
-            if (CurHum >= MaxHum)
-            { CurHum = MaxHum; }
+            if (Current < Max || (Current + Step) < Max)
+            { Current += Step; }
+            if (Current >= Max)
+            { Current = Max; }
         }
         public void Decrease()
         {
-            if (CurHum > MinHum || (CurHum - StepHum) > MinHum)
-            { CurHum -= StepHum; }
-            if (CurHum <= MinHum)
-            { CurHum = MinHum; }
+            if (Current > Min || (Current - Step) > Min)
+            { Current -= Step; }
+            if (Current <= Min)
+            { Current = Min; }
         }
         public int HandSet()
         {
-            Console.WriteLine("Введите необходимый уровень влажности");
-            Console.WriteLine("Важно!!! Устанавливаемая влажности может быть в пределах\n от 30 до 60 единиц");
+            Console.WriteLine("Введите необходимый уровень температуры.\nВажно!!! Устанавливаемая температура может находится в пределах (40 до 95)");
             string str = Console.ReadLine();
             int a = Int32.Parse(str);
-            if (a > MinHum && a < MaxHum)
-            { CurHum = a; }
+            if (a > Min && a < Max)
+            { Current = a; }
             Console.WriteLine("Вы ввели не правильную размерность влажности");
-            return CurHum;
+            return Current;
         }
         public override string ToString()
         {
@@ -99,7 +100,7 @@ namespace SimpleSmartHouse1._0
             {
                 mode = "Авто";
             }
-            return "Марка: " + Name + ", Состояние: " + State + ", Режим: " + mode + ", Сухость воздуха: " + CurHum;
+            return "Марка: " + Name + ", Состояние: " + State + ", Режим: " + mode + ", Сухость воздуха: " + Current;
         }
     }
 }

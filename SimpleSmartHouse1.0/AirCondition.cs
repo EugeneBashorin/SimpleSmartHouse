@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace SimpleSmartHouse1._0
 {
-    class AirCondition : Device, ITemperatureAble, IChangeSettingAble
+    class AirCondition : Device,  IChangeSettingAble
     {
         private Mode mode;
-        public int MinTemp { get; set; }
-        public int MaxTemp { get; set; }
-        public int CurTemp { get; set; }
-        public int StepTemp { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
+        public int Current { get; set; }
+        public int Step { get; set; }
 
         public AirCondition(string name, bool state, Mode mode, int current) : base(name, state)
         {
             Name = name;
             State = state;
             this.mode = mode;
-            CurTemp = current;
+            Current = current;
         }
         public void SetTurboMode()
         {
@@ -39,37 +39,36 @@ namespace SimpleSmartHouse1._0
         }
         public int ChangeStep()
         {
-            Console.WriteLine("Введите значение шага изменения температуры");
+            Console.WriteLine("Введите значение шага изменения температуры для обогревателя.\nШаг температуры может находится в пределах (1..5).\nШаг по умолчанию равен 1");
             string v = Console.ReadLine();
             int a = Convert.ToInt32(v);
             if (a >= 1 && a <= 5)
-            { StepTemp = a; }
-            return StepTemp;
+            { Step = a; }
+            return Step;
         }
         public void Increase()
         {
-            if (CurTemp < MaxTemp || (CurTemp + StepTemp) < MaxTemp)
-            { CurTemp += StepTemp; }
-            if (CurTemp >= MaxTemp)
-            { CurTemp = MaxTemp; }
+            if (Current < Max || (Current + Step) < Max)
+            { Current += Step; }
+            if (Current >= Max)
+            { Current = Max; }
         }
         public void Decrease()
         {
-            if (CurTemp > MinTemp || (CurTemp - StepTemp) > MinTemp)
-            { CurTemp -= StepTemp; }
-            if (CurTemp <= MinTemp)
-            { CurTemp = MinTemp; }
+            if (Current > Min || (Current - Step) > Min)
+            { Current -= Step; }
+            if (Current <= Min)
+            { Current = Min; }
         }
         public int HandSet()
         {
-            Console.WriteLine("Введите необходимый уровень температуры");
-            Console.WriteLine("Важно!!! Устанавливаемая температура может быть в пределах\n от 14 до 30 градусов по шкале Цельсия");
+            Console.WriteLine("Введите необходимый уровень температуры.\nВажно!!! Устанавливаемая температура может находится в пределах (14 до 30)");
             string str = Console.ReadLine();
             int a = Int32.Parse(str);
-            if (a > MinTemp && a < MaxTemp)
-            { CurTemp = a; }
+            if (a > Min && a < Max)
+            { Current = a; }
             Console.WriteLine("Вы ввели не правильную размерность температуры");
-            return CurTemp;
+            return Current;
         }
         public override string ToString()
         {
@@ -99,7 +98,7 @@ namespace SimpleSmartHouse1._0
             {
                 mode = "Авто";
             }
-            return "Марка: " + Name + ", Состояние: " + State + ", Режим: " + mode + ", Температура: " + CurTemp;
+            return "Марка: " + Name + ", Состояние: " + State + ", Режим: " + mode + ", Температура: " + Current;
         }
     }
 
