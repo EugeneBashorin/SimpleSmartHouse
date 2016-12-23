@@ -11,7 +11,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAEAAwAAABAKCEAAABAIAABAAAgAAACAAAgEAAAIg=</HashCode>
+      <HashCode>AAAAEAAwAAABAKCEAAABAIAABAAAgAAAAAAAAAAAAIg=</HashCode>
       <FileName>AirCondition.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -27,7 +27,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAAAEAAgAAABAICEAAABAAAABAAAAAAACAAAgEgBIIg=</HashCode>
+      <HashCode>gAAAEAAgAAABAICEAAABAAAABAAAAAAAAAAAAAgBIIg=</HashCode>
       <FileName>Dehumidifier.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -50,7 +50,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAEAAwAAABAKCEAAABAIAABAAAgAAACAAAgEAAAIg=</HashCode>
+      <HashCode>AAAAEAAwAAABAKCEAAABAIAABAAAgAAAAAAAAAAAAIg=</HashCode>
       <FileName>Heater.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -66,7 +66,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAAAEAAgAAABAICEAAABAAAABAAAAAAACAAAgEgBIIg=</HashCode>
+      <HashCode>gAAAEAAgAAABAICEAAABAAAABAAAAAAAAAAAAAgBIIg=</HashCode>
       <FileName>Humidifier.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -79,21 +79,21 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="SimpleSmartHouse1._0.IChangeSettingAble">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAABAAAAAAABAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>IChangeSettingAble.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SimpleSmartHouse1._0.IHumidityAble">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+    <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBIAA=</HashCode>
       <FileName>IHumidityAble.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SimpleSmartHouse1._0.ITemperatureAble">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAACAAAAAAAIAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITemperatureAble.cs</FileName>
@@ -103,7 +103,7 @@
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAACAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <FileName>Mode.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

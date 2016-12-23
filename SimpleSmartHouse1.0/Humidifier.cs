@@ -21,20 +21,6 @@ namespace SimpleSmartHouse1._0
             this.mode = mode;
             StepHum = current;
         }
-        public string ChangeName()
-        {
-            Console.WriteLine("Введите название дивайса");
-            Name = Console.ReadLine();
-            return Name;
-        }
-        public void SwtchOn()
-        {
-            State = true;
-        }
-        public void SwtchOff()
-        {
-            State = false;
-        }
         public void SetTurboMode()
         {
             mode = Mode.Turbo;

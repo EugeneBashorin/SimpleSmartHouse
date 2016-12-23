@@ -16,10 +16,20 @@ namespace SimpleSmartHouse1._0
             State = state;
         }
         public void SwtchOn()
-        { }
+         {
+            State = true;
+         }
+
         public void SwtchOff()
-        { }
-        public void ChangeName()
-        { }
+        {
+            State = true;
+        }
+
+        public string ChangeName()
+        {
+            Console.WriteLine("Введите марку дивайса");
+            Name = Console.ReadLine();
+            return Name;
+        }
     }
 }

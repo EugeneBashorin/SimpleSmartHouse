@@ -13,8 +13,8 @@ namespace SimpleSmartHouse1._0
       deviceDict.Add("Heater", new Heater("Ufo", false, Mode.Eco, 18) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 18 });
       deviceDict.Add("Humidifier", new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 50 });
       deviceDict.Add("Dehumidifier", new Dehumidifier("BALLU", false, Mode.Low, 40) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 40 });
-      deviceDict.Add("AirCondition", new AirCondition("ЯМаха", false, Mode.Low, 22) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 22 });
-
+      deviceDict.Add("AirCondition", new AirCondition("Yamaha", false, Mode.Low, 22) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 22 });
+               
       while (true)
       {
        Console.Clear();
@@ -36,26 +36,27 @@ namespace SimpleSmartHouse1._0
                      }
             if (commands[0].ToLower() == "add" && !deviceDict.ContainsKey(commands[1]))
               {
-               if (commands[1] == "Heater")
-                 {
-                  deviceDict.Add(commands[1], new Heater("Ufo", false, Mode.Eco, 18) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 18 });
-                  continue;
-                     }
-                else if (commands[1] == "Humidifier")
-                 {
-                  deviceDict.Add(commands[1], new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 50 });
-                  continue;
+                    if (commands[1] == "Heater")
+                    {
+                        deviceDict.Add(commands[1], new Heater("Ufo", false, Mode.Eco, 18) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 18 });
+                        continue;
                     }
-               else if (commands[1] == "Dehumidifier")
-                 {
-                  deviceDict.Add(commands[1], new Dehumidifier("BALLU", false, Mode.Low, 40) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 40 });
-                  continue;
+                    else if (commands[1] == "Humidifier")
+                    {
+                        deviceDict.Add(commands[1], new Humidifier("Cooper & Hunter", false, Mode.Low, 50) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 50 });
+                        continue;
                     }
-               else if (commands[1] == "AirCondition")
-                 {
-                  deviceDict.Add(commands[1], new AirCondition("ЯМаха", false, Mode.Low, 22) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 22});
-                  continue;
-                   }
+                    else if (commands[1] == "Dehumidifier")
+                    {
+                        deviceDict.Add(commands[1], new Dehumidifier("BALLU", false, Mode.Low, 40) { MinHum = 45, MaxHum = 90, StepHum = 5, CurHum = 40 });
+                        continue;
+                    }
+                    else if (commands[1] == "AirCondition")
+                    {
+                        deviceDict.Add(commands[1], new AirCondition("ЯМаха", false, Mode.Low, 22) { MinTemp = 14, MaxTemp = 30, StepTemp = 1, CurTemp = 22 });
+                        continue;
+                    }
+                    else { }
                      }               
                if (commands[0].ToLower() == "add" && deviceDict.ContainsKey(commands[1]))
                   {
@@ -69,6 +70,7 @@ namespace SimpleSmartHouse1._0
                     Help();
                     continue;
                        }
+           
                    switch (commands[0].ToLower())
                      {
                     case "del":
@@ -83,30 +85,150 @@ namespace SimpleSmartHouse1._0
                     case "cn":
                         deviceDict[commands[1]].ChangeName();
                         break;
-                    //case "tur":
-                    //    deviceDict[commands[1]].SetTurboMode();
-                    //    break;
-                    //case "eco":
-                    //    deviceDict[commands[1]].SetEcoMode();
-                    //    break;
-                    //case "low":
-                    //    deviceDict[commands[1]].SetLowMode();
-                    //    break;
-                    //case "aut":
-                    //    deviceDict[commands[1]].SetAutoMode();
-                    //    break;
-                    //case "inc":
-                    //    deviceDict[commands[1]].Increase();
-                    //    break;
-                    //case "dec":
-                    //    deviceDict[commands[1]].Decrease();
-                    //    break;
-                    //case "hse":
-                    //    deviceDict[commands[1]].HandSet();
-                    //    break;
-                    //case "chs":
-                    //    deviceDict[commands[1]].ChangeStep();
-                    //    break;
+                    case "tur":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).SetTurboMode();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).SetTurboMode();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).SetTurboMode();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).SetTurboMode();
+                        }
+                        break;
+                    case "eco":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).SetEcoMode();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).SetEcoMode();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).SetEcoMode();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).SetEcoMode();
+                        }          
+                        break;
+                    case "low":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).SetLowMode();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).SetLowMode();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).SetLowMode();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).SetLowMode();
+                        }
+                        break;
+                    case "aut":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).SetAutoMode();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).SetAutoMode();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).SetAutoMode();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).SetAutoMode();
+                        }
+                         break;
+                    case "inc":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).Increase();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).Increase();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).Increase();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).Increase();
+                        }
+                        break;
+                    case "dec":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).Decrease();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).Decrease();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).Decrease();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).Decrease();
+                        }
+                        break;
+                    case "hse":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).HandSet();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).HandSet();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).HandSet();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).HandSet();
+                        }
+                        break;
+                    case "chs":
+                        if (commands[1] == "Heater")
+                        {
+                            ((Heater)deviceDict[commands[1]]).ChangeStep();
+                        }
+                        else if (commands[1] == "Humidifier")
+                        {
+                            ((Humidifier)deviceDict[commands[1]]).ChangeStep();
+                        }
+                        else if (commands[1] == "Dehumidifier")
+                        {
+                            ((Dehumidifier)deviceDict[commands[1]]).ChangeStep();
+                        }
+                        else
+                        {
+                            ((AirCondition)deviceDict[commands[1]]).ChangeStep();
+                        }
+                        break;                      
                     default:
                         Help();
                         break; 
@@ -118,7 +240,7 @@ namespace SimpleSmartHouse1._0
             Console.WriteLine("Доступные команды:");
             Console.WriteLine("\tadd nameDevice - Добавить прибор в список");
             Console.WriteLine("\tdel nameDevice - Удалить прибор из списка");
-            Console.WriteLine("\tnc nameDevice - Переименовать Марку дивайса");
+            Console.WriteLine("\tcn nameDevice - Переименовать Марку дивайса");
             Console.WriteLine("\ton nameDevice  - Включить прибор");
             Console.WriteLine("\toff nameDevice - Выключить прибор");
             Console.WriteLine("\ttur nameDevice - переводит прибор в режим Турбо");
@@ -134,12 +256,4 @@ namespace SimpleSmartHouse1._0
             Console.ReadLine();
     }
  }  
-    public enum Mode
-{
-   Turbo,
-   Eco,
-   Low,
-   Auto
-        }       
-
 }
