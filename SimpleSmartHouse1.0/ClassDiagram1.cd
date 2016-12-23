@@ -12,7 +12,7 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
-      <FileName>AirCondition.cs</FileName>
+      <FileName>Classes\AirCondition.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -28,7 +28,7 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
-      <FileName>Dehumidifier.cs</FileName>
+      <FileName>Classes\Dehumidifier.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -36,7 +36,7 @@
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAhEAAAAA=</HashCode>
-      <FileName>Device.cs</FileName>
+      <FileName>Classes\Device.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimpleSmartHouse1._0.Heater">
@@ -51,7 +51,7 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
-      <FileName>Heater.cs</FileName>
+      <FileName>Classes\Heater.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -67,36 +67,36 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
-      <FileName>Humidifier.cs</FileName>
+      <FileName>Classes\Humidifier.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SimpleSmartHouse1._0.Program">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimpleSmartHouse1._0.Menu">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Menu.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Menu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SimpleSmartHouse1._0.IChangeSettingAble">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAABABAAAAEACBAAAAAAAAAAAAIAAAAAAAAIA=</HashCode>
-      <FileName>IChangeSettingAble.cs</FileName>
+      <FileName>Interfacies\IChangeSettingAble.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SimpleSmartHouse1._0.Mode">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAACAAAAA=</HashCode>
-      <FileName>Mode.cs</FileName>
+      <FileName>Enums\Mode.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AirCondition.cs" />
-    <Compile Include="Dehumidifier.cs" />
-    <Compile Include="Device.cs" />
-    <Compile Include="Heater.cs" />
-    <Compile Include="Humidifier.cs" />
-    <Compile Include="IChangeSettingAble.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="Mode.cs" />
+    <Compile Include="Classes\AirCondition.cs" />
+    <Compile Include="Classes\Dehumidifier.cs" />
+    <Compile Include="Classes\Device.cs" />
+    <Compile Include="Classes\Heater.cs" />
+    <Compile Include="Classes\Humidifier.cs" />
+    <Compile Include="Interfacies\IChangeSettingAble.cs" />
+    <Compile Include="Classes\Menu.cs" />
+    <Compile Include="Enums\Mode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,6 +58,7 @@
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
