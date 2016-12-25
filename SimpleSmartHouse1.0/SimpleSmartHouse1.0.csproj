@@ -43,22 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Channel.cs" />
+    <Compile Include="Classes\Channel.cs" />
     <Compile Include="Classes\AirCondition.cs" />
     <Compile Include="Classes\Dehumidifier.cs" />
     <Compile Include="Classes\Device.cs" />
     <Compile Include="Classes\Heater.cs" />
-    <Compile Include="IChannelAble.cs" />
+    <Compile Include="Interfacies\IChannelAble.cs" />
     <Compile Include="Interfacies\IChangeSettingAble.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Enums\Mode.cs" />
-    <Compile Include="IVolumAble.cs" />
+    <Compile Include="Interfacies\IVolumAble.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Radio.cs" />
-    <Compile Include="TemperatureH.cs" />
-    <Compile Include="TV.cs" />
-    <Compile Include="Volume.cs" />
+    <Compile Include="Classes\Radio.cs" />
+    <Compile Include="Classes\TemperatureH.cs" />
+    <Compile Include="Classes\TV.cs" />
+    <Compile Include="Classes\Volume.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

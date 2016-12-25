@@ -70,7 +70,7 @@
     <Position X="3.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAABABAAAAEACBAAAAAAAAAAAAIAAAAAAAAIA=</HashCode>
-      <FileName>TemperatureH.cs</FileName>
+      <FileName>Classes\TemperatureH.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -78,21 +78,21 @@
     <Position X="8.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEgAAgIAAAAAAEAAAAAAIAAAAAAAAAAAIAAAAAAAg=</HashCode>
-      <FileName>TV.cs</FileName>
+      <FileName>Classes\TV.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimpleSmartHouse1._0.Radio">
     <Position X="10.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEgAAgIAAAAAAEAAAAAAIAAAAAAAAAAAIAAAAAAAg=</HashCode>
-      <FileName>Radio.cs</FileName>
+      <FileName>Classes\Radio.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimpleSmartHouse1._0.Channel">
     <Position X="8.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEgAAAABAAAAAAEACAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Channel.cs</FileName>
+      <FileName>Classes\Channel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -100,7 +100,7 @@
     <Position X="10.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIBAAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
-      <FileName>Volume.cs</FileName>
+      <FileName>Classes\Volume.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -115,14 +115,14 @@
     <Position X="10.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEgAAAABAAAAAAEACAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IChannelAble.cs</FileName>
+      <FileName>Interfacies\IChannelAble.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SimpleSmartHouse1._0.IVolumAble">
     <Position X="8.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIBAAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
-      <FileName>IVolumAble.cs</FileName>
+      <FileName>Interfacies\IVolumAble.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SimpleSmartHouse1._0.Mode">
