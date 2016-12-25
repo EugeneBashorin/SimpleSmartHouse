@@ -6,23 +6,35 @@ using System.Threading.Tasks;
 
 namespace SimpleSmartHouse1._0
 {
-    class Dehumidifier : Device, IChangeSettingAble
+    class Dehumidifier : Device
     {
+        public IChangeSettingAble Temper { get; set; }
         private Mode mode;
-        public int Min { get; set; }
-        public int Max { get; set; }
-        public int Current { get; set; }
-        public int Step { get; set; }
-  
-
-        public Dehumidifier(string name, bool state, Mode mode, int currentH) : base(name, state)
+       
+        public Dehumidifier(string name, bool state, Mode mode, IChangeSettingAble Temper) : base(name, state)
         {
             Name = name;
-            State = false;
+            State = state;
             this.mode = mode;
-            Step = currentH;
-          
-        }        
+            this.Temper = Temper;
+        }
+        public void Increase()
+        {
+            Temper.Increase();
+        }
+        public void Decrease()
+        {
+            Temper.Decrease();
+        }
+        public void HandSet()
+        {
+            Temper.ChangeStep();
+        }
+        public void ChangeStep()
+        {
+            Temper.ChangeStep();
+        }
+
         public void SetTurboMode()
         {
             mode = Mode.Turbo;
@@ -39,56 +51,7 @@ namespace SimpleSmartHouse1._0
         {
             mode = Mode.Auto;
         }
-        public int ChangeStep()
-        {
-            Console.WriteLine("Введите значение шага изменения температуры для осушителя воздуха.\nШаг температуры может находится в пределах (1..10).Шаг по умолчанию равен 1");
-            try
-            {
-                int a = Convert.ToInt32(Console.ReadLine());
-                if (a >= 1 && a <= 10)
-                { Step = a; }
-                return Step;
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine("Message - " + e.Message);
-                Console.WriteLine("Введите цифру");
-                Console.ReadLine();
-                return Step;
-            }
-        }
-         public void Increase()
-        {
-            if (Current < Max || (Current + Step) < Max)
-            { Current += Step; }
-            if (Current >= Max)
-            { Current = Max; }
-        }
-        public void Decrease()
-        {
-            if (Current > Min || (Current - Step) > Min)
-            { Current -= Step; }
-            if (Current <= Min)
-            { Current = Min; }
-        }
-        public int HandSet()
-        {
-            Console.WriteLine("Введите необходимый уровень температуры.\nВажно!!! Устанавливаемая температура может находится в пределах (40 до 95)");
-            try
-            {
-                int a = Convert.ToInt32(Console.ReadLine());
-                if (a > Min && a < Max)
-                { Current = a; }
-                return Current;
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine("Message - " + e.Message);
-                Console.WriteLine("Введите число в указанных выше пределах");
-                Console.ReadLine();
-                return Current;
-            }
-        }
+
         public override string ToString()
         {
             string State;
@@ -117,7 +80,59 @@ namespace SimpleSmartHouse1._0
             {
                 mode = "Авто";
             }
-            return "Марка: " + Name + ", Состояние: " + State + ", Режим: " + mode + ", Сухость воздуха: " + Current;
+            return "Марка: " + Name + ", Состояние: " + State + ", Режим: " + mode + ", Сухость воздуха: " + Temper.Current;
         }
     }
 }
+
+//public int ChangeStep()
+//{
+//    Console.WriteLine("Введите значение шага изменения температуры для осушителя воздуха.\nШаг температуры может находится в пределах (1..10).Шаг по умолчанию равен 1");
+//    try
+//    {
+//        int a = Convert.ToInt32(Console.ReadLine());
+//        if (a >= 1 && a <= 10)
+//        { Step = a; }
+//        return Step;
+//    }
+//    catch (FormatException e)
+//    {
+//        Console.WriteLine("Message - " + e.Message);
+//        Console.WriteLine("Введите цифру");
+//        Console.ReadLine();
+//        return Step;
+//    }
+//}
+// public void Increase()
+//{
+//    if (Current < Max || (Current + Step) < Max)
+//    { Current += Step; }
+//    if (Current >= Max)
+//    { Current = Max; }
+
+//}
+//public void Decrease()
+//{
+//    if (Current > Min || (Current - Step) > Min)
+//    { Current -= Step; }
+//    if (Current <= Min)
+//    { Current = Min; }
+//}
+//public int HandSet()
+//{
+//    Console.WriteLine("Введите необходимый уровень температуры.\nВажно!!! Устанавливаемая температура может находится в пределах (40 до 95)");
+//    try
+//    {
+//        int a = Convert.ToInt32(Console.ReadLine());
+//        if (a > Min && a < Max)
+//        { Current = a; }
+//        return Current;
+//    }
+//    catch (FormatException e)
+//    {
+//        Console.WriteLine("Message - " + e.Message);
+//        Console.WriteLine("Введите число в указанных выше пределах");
+//        Console.ReadLine();
+//        return Current;
+//    }
+//}

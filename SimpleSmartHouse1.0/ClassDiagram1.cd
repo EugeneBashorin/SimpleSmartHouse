@@ -1,36 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SimpleSmartHouse1._0.AirCondition">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="1.5" Y="4" Width="1.5" />
     <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
       <Path>
         <Point X="4.75" Y="2.824" />
         <Point X="4.75" Y="3.393" />
-        <Point X="1.25" Y="3.393" />
-        <Point X="1.25" Y="4" />
+        <Point X="2.25" Y="3.393" />
+        <Point X="2.25" Y="4" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
+      <HashCode>AAAAEAAgAAABAICEAAABBAAABAAAAAAAAAAAAAAAAIg=</HashCode>
       <FileName>Classes\AirCondition.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SimpleSmartHouse1._0.Dehumidifier">
-    <Position X="5" Y="4" Width="1.5" />
-    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true" FixedToPoint="true">
       <Path>
         <Point X="4.75" Y="2.824" />
-        <Point X="4.75" Y="3.383" />
-        <Point X="5.75" Y="3.383" />
-        <Point X="5.75" Y="4" />
+        <Point X="4.75" Y="3.866" />
+        <Point X="4.75" Y="3.866" />
+        <Point X="4.75" Y="4" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
+      <HashCode>AAAAEAAgAAABAICEAAABBAAABAAAAAAAAAAAAAAAAIg=</HashCode>
       <FileName>Classes\Dehumidifier.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SimpleSmartHouse1._0.Device">
     <Position X="4" Y="0.5" Width="1.5" />
@@ -40,60 +38,95 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SimpleSmartHouse1._0.Heater">
-    <Position X="7.25" Y="4" Width="1.5" />
+    <Position X="6" Y="4" Width="1.5" />
     <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
       <Path>
         <Point X="4.75" Y="2.824" />
         <Point X="4.75" Y="3.37" />
-        <Point X="8" Y="3.37" />
-        <Point X="8" Y="4" />
+        <Point X="6.75" Y="3.37" />
+        <Point X="6.75" Y="4" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
+      <HashCode>AAAAEAAgAAABAICEAAABBAAABAAAAAAAAAAAAAAAAIg=</HashCode>
       <FileName>Classes\Heater.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SimpleSmartHouse1._0.Humidifier">
-    <Position X="2.75" Y="4" Width="1.5" />
-    <InheritanceLine Type="SimpleSmartHouse1._0.Device" ManuallyRouted="true">
-      <Path>
-        <Point X="4.75" Y="2.824" />
-        <Point X="4.75" Y="3.37" />
-        <Point X="3.5" Y="3.37" />
-        <Point X="3.5" Y="4" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAEAAgABABAICEEACBAAAABAAAAAAAIAAAAAAAAIg=</HashCode>
-      <FileName>Classes\Humidifier.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SimpleSmartHouse1._0.Program">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimpleSmartHouse1._0.Menu">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Menu.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SimpleSmartHouse1._0.TemperatureH">
+    <Position X="3.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABABAAAAEACBAAAAAAAAAAAAIAAAAAAAAIA=</HashCode>
+      <FileName>TemperatureH.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.TV">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAgIAAAAAAEAAAAAAIAAAAAAAAAAAIAAAAAAAg=</HashCode>
+      <FileName>TV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Radio">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAgIAAAAAAEAAAAAAIAAAAAAAAAAAIAAAAAAAg=</HashCode>
+      <FileName>Radio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Channel">
+    <Position X="8.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAABAAAAAAEACAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Channel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleSmartHouse1._0.Volume">
+    <Position X="10.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Volume.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="SimpleSmartHouse1._0.IChangeSettingAble">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="3.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAABABAAAAEACBAAAAAAAAAAAAIAAAAAAAAIA=</HashCode>
       <FileName>Interfacies\IChangeSettingAble.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="SimpleSmartHouse1._0.IChannelAble">
+    <Position X="10.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAABAAAAAAEACAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IChannelAble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleSmartHouse1._0.IVolumAble">
+    <Position X="8.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>IVolumAble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="SimpleSmartHouse1._0.Mode">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAACAAAAA=</HashCode>
       <FileName>Enums\Mode.cs</FileName>
